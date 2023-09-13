@@ -1,0 +1,8 @@
+body{
+    font-family: "Open Sans", "Lato", arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.navDivs{
+    @apply px-2;
+}
