@@ -3,6 +3,3 @@ body{
     -webkit-font-smoothing: antialiased;
 }
 
-.navDivs{
-    @apply px-2;
-}
