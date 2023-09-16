@@ -1,3 +1,40 @@
+// Mouse pointer
+const blob = document.querySelector('#blob')
+const footer = document.querySelector('footer')
+const bodyy = document.body
+const maxY = footer.top;
+
+let clientX
+let clientY
+let scrollY = 0
+
+document.body.onpointermove = event => {
+    ({clientX, clientY} = event);
+
+    // blob.style.left = `${x}px`
+    // blob.style.top = `${y}px`
+
+    blob.animate({
+        left: `${clientX}px`,
+        top : `${clientY+scrollY}px`
+    }, {duration:3000, fill:'forwards'})
+}
+
+document.body.onscroll = () => {
+    scrollY = window.scrollY
+    
+    if(maxY != scrollY){
+        blob.animate({
+            left: `${clientX}px`,
+            top : `${clientY+scrollY}px`
+        }, {duration:3000, fill:'forwards'})
+    }
+
+}
+
+
+
+
 // flipping theme icon
 const lightIcon = document.querySelector("#lightIcon");
 const darkIcon = document.querySelector("#darkIcon");
@@ -43,3 +80,8 @@ setTimeout(()=>{
     designationDiv.style.transition = 'transform 0.9s ease-in-out';
     designationDiv.style.transform = 'translateX(33.3333%)';
 },timeVal)
+
+
+// Page reload on logo click
+let logo = document.querySelector("#logo")
+logo.addEventListener('click', ()=>{location.reload()})

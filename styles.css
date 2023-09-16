@@ -1,5 +1,59 @@
 body{
     font-family: "Open Sans", "Lato", arial, sans-serif;
     -webkit-font-smoothing: antialiased;
+    /* overflow: hidden; */
 }
 
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@keyframes rotate{
+    from{
+        rotate : 0deg;
+    }
+    50%{
+        scale : 1 1.5;
+    }
+    to{
+        rotate : 360deg;
+    }
+}
+
+#blob{
+    height: 800px;
+    aspect-ratio: 1;
+    background-color: white;
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background: linear-gradient(
+        to right,
+        blue,
+        green
+    );
+    animation: rotate 30s infinite;
+    /* filter : blur(200px); */
+    z-index: -1;
+}
+
+#blur{
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    backdrop-filter: blur(125px);
+}
+
+.content{
+    z-index: 5;
+}
+
+section, header, footer{
+    z-index: 10;
+    position :relative;
+}

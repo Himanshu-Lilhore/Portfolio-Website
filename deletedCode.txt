@@ -6,9 +6,7 @@ bg-gradient-to-b from-blue-400 to-purple-500
  bg-gradient-to-b from-red-400 to-yellow-400
  bg-gradient-to-b from-yellow-400 to-green-600
 
-<div>
-    <img alt="gif here" src="./media/hello.gif" style="max-height: 300px;">
-</div>
+
 
 
 
