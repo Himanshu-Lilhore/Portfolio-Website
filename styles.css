@@ -2,6 +2,11 @@ body{
     font-family: "Open Sans", "Lato", arial, sans-serif;
     -webkit-font-smoothing: antialiased;
 
+    /* Proj Cards : */
+    --img-height : 175px;
+    --img-width : 275px;
+    --card-padding : 18px;
+
     /* COLORS :: */
     --torch-color-1 : #5C8374;
     --torch-color-2 : #183D3D;
@@ -129,14 +134,33 @@ div{
 }
 
 #selfRef{
-    width: 1440px;
-    height: 848px;
+    width: calc(var(--img-width)*5);
+    height: calc(var(--img-height)*5);
     -webkit-transform: scale(0.2);
     -webkit-transform-origin: 0 0;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     #selfRef {
-      zoom: 1;
+        zoom: 1;
     }
-  }
+}
+
+.card-img{
+    width : var(--img-width);
+    height : var(--img-height);
+    border-width : 4px;
+    border-color : black;
+    overflow: hidden;
+}
+
+.card{
+    width : var(--card-width);
+    height : var(--card-height);
+    padding : var(--card-padding);
+    display : block;
+    border-radius : 0.5rem;
+    overflow : hidden;
+    color : black;
+    font-weight: bold;
+}
