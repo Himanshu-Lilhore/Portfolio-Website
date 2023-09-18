@@ -2,34 +2,31 @@
 const blob = document.querySelector('#blob')
 const footer = document.querySelector('footer')
 const bodyy = document.body
-const maxY = footer.top;
+const originalBg = document.querySelector('#originalBg')
 
 let clientX
 let clientY
 let scrollY = 0
 
+function animateBlob(){
+    if(blob.classList.contains('torch-mode-on')){
+        blob.animate({
+            left: `${clientX}px`,
+            top : `${clientY + scrollY}px`
+        }, {duration:3000, fill:'forwards'})
+    }
+}
+
 document.body.onpointermove = event => {
     ({clientX, clientY} = event);
 
-    // blob.style.left = `${x}px`
-    // blob.style.top = `${y}px`
-
-    blob.animate({
-        left: `${clientX}px`,
-        top : `${clientY+scrollY}px`
-    }, {duration:3000, fill:'forwards'})
+    animateBlob();
 }
 
 document.body.onscroll = () => {
     scrollY = window.scrollY
     
-    if(maxY != scrollY){
-        blob.animate({
-            left: `${clientX}px`,
-            top : `${clientY+scrollY}px`
-        }, {duration:3000, fill:'forwards'})
-    }
-
+    animateBlob();
 }
 
 
@@ -84,4 +81,16 @@ setTimeout(()=>{
 
 // Page reload on logo click
 let logo = document.querySelector("#logo")
-logo.addEventListener('click', ()=>{location.reload()})
+logo.addEventListener('click', ()=>{document.location.reload()})
+
+
+
+// Torch toggle
+const torchToggle = document.querySelector('#torchToggle')
+
+torchToggle.addEventListener('click', function toggleTorchClasses(){
+    blob.classList.toggle("torch-mode-on")
+    blob.classList.toggle("hidden")
+    originalBg.classList.toggle('hidden')
+})
+
