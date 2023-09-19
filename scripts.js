@@ -40,6 +40,24 @@ const themeToggleBtn = document.querySelector("#themeToggleBtn");
 themeToggleBtn.addEventListener('click', function(){
     lightIcon.classList.toggle('hidden')
     darkIcon.classList.toggle('hidden')
+
+    let r = document.body
+    let rs = getComputedStyle(r)
+
+    let temp = rs.getPropertyValue('--bg-color-1')
+    r.style.setProperty('--bg-color-1', rs.getPropertyValue('--bg-color-2'));
+    r.style.setProperty('--bg-color-2', temp);
+
+    temp = rs.getPropertyValue('--complementory-1')
+    r.style.setProperty('--complementory-1', rs.getPropertyValue('--complementory-2'));
+    r.style.setProperty('--complementory-2', temp);
+
+    temp = rs.getPropertyValue('--torch-color-11')
+    r.style.setProperty('--torch-color-11', rs.getPropertyValue('--torch-color-21'));
+    r.style.setProperty('--torch-color-21', temp);
+    temp = rs.getPropertyValue('--torch-color-12')
+    r.style.setProperty('--torch-color-12', rs.getPropertyValue('--torch-color-22'));
+    r.style.setProperty('--torch-color-22', temp);
 });
 
 
@@ -75,7 +93,7 @@ setTimeout(()=>{
     designationDiv.classList.remove('justify-left')
     // designationDiv.classList.add('justify-between')
     designationDiv.style.transition = 'transform 0.9s ease-in-out';
-    designationDiv.style.transform = 'translateX(33.3333%)';
+    designationDiv.style.transform = 'translateX(20%)';
 },timeVal)
 
 
@@ -93,4 +111,5 @@ torchToggle.addEventListener('click', function toggleTorchClasses(){
     blob.classList.toggle("hidden")
     originalBg.classList.toggle('hidden')
 })
+
 

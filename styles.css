@@ -2,18 +2,21 @@ body{
     font-family: "Open Sans", "Lato", arial, sans-serif;
     -webkit-font-smoothing: antialiased;
 
+
+    /* COLORS :: */
+    --torch-color-11 : #d03a3a;
+    --torch-color-12 : #15b0df;
+    --torch-color-21 : #662549;
+    --torch-color-22 : #F39F5A;
+    --bg-color-1 : rgb(230, 229, 229);
+    --bg-color-2 : rgb(15, 15, 15);
+    --complementory-1 : rgb(32, 32, 32);
+    --complementory-2 : rgb(243, 243, 243);
+    
     /* Proj Cards : */
     --img-height : 175px;
     --img-width : 275px;
     --card-padding : 18px;
-
-    /* COLORS :: */
-    --torch-color-1 : #5C8374;
-    --torch-color-2 : #183D3D;
-    --bg-color-1 : black;
-    --bg-color-2 : ;
-    --complementory-1 : rgb(208, 208, 208);
-    --complementory-2 : ;
 }
 header, footer{
     z-index : 10;
@@ -23,11 +26,13 @@ section{
     z-index : 10;
     position : relative;
     margin : 5% 0 5% 0;
-    color:var(--complementory-1);
 }
 div{
     position : relative;
     z-index: inherit;
+}
+li{
+    margin:20px 0;
 }
 
 @keyframes rotate{
@@ -40,6 +45,17 @@ div{
     to{
         rotate : 360deg;
     }
+}
+
+.navDivs{
+    font-size:x-large;
+    font-weight: 600;
+}
+
+.font-border{
+    color: var(--bg-color-1);
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: var(--complementory-1);
 }
 
 .bgContainer{
@@ -65,8 +81,8 @@ div{
     border-radius: 50%;
     background: linear-gradient(
         to right,
-        var(--torch-color-1),
-        var(--torch-color-2)
+        var(--torch-color-11),
+        var(--torch-color-12)
     );
     animation: rotate 25s infinite;
     /* filter : blur(200px); */
@@ -87,8 +103,8 @@ div{
     border-radius: 50%;
     background: linear-gradient(
         to right,
-        var(--torch-color-1),
-        var(--torch-color-2)
+        var(--torch-color-11),
+        var(--torch-color-12)
     );
     animation: rotate 25s infinite;
     /* filter : blur(200px); */
@@ -133,6 +149,27 @@ div{
     transform: rotate(+3deg);
 }
 
+.connectDiv{
+    transform: rotate(3deg);
+    background: #f48925;
+    /* linear-gradient(
+        to right,
+        #f48925,
+        #183668
+    ); */
+    height: 70%;
+    width: 200%;
+    translate: -10% 16%;
+    position: absolute;
+    z-index: 1;
+}
+
+#connectDiv2{
+    top:8%;
+    height: 200%;
+    transform: rotate(-3deg);
+}
+
 #selfRef{
     width: calc(var(--img-width)*5);
     height: calc(var(--img-height)*5);
@@ -163,4 +200,12 @@ div{
     overflow : hidden;
     color : black;
     font-weight: bold;
+}
+
+.connectIcon{
+    aspect-ratio: 1;
+    margin : 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
