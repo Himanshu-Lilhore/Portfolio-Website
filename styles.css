@@ -4,8 +4,9 @@ body{
 
 
     /* COLORS :: */
-    --torch-color-11 : #d03a3a;
-    --torch-color-12 : #15b0df;
+    --torch-color-11 : #15b0df;
+    --torch-color-12 : #662549;
+    /* --torch-color-12 : #d03a3a; */
     --torch-color-21 : #662549;
     --torch-color-22 : #F39F5A;
     --bg-color-1 : rgb(230, 229, 229);
@@ -89,12 +90,9 @@ li{
     z-index: -1;
 }
 
-.content{
-    z-index: 5;
-}
 
 .torch-mode-on{
-    height: 800px;   /* update blobWidth in js too */
+    height: 700px;   /* update blobWidth in js too */
     aspect-ratio: 1;
     position: absolute;
     top: 3%;
@@ -111,13 +109,24 @@ li{
     z-index: -1;
 }
 
+#randShapes{
+    z-index: 2;
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    top:-20%;
+    left:-20%;
+    filter : blur(50px);
+}
+
 .aboutMeDiv{
     transform: rotate(3deg);
-    background: linear-gradient(
+    background: #2b1867;
+    /* linear-gradient(
         to right,
         #100239,
-        #44327a
-    );
+        #3e2390
+    ); */
     height: 70%;
     width: 200%;
     translate: -10% 16%;
@@ -128,6 +137,10 @@ li{
 #aboutMeDiv2{
     top:8%;
     transform: rotate(-3deg);
+}
+
+.cardTitle{
+    font-weight:600;
 }
 
 .projectDiv{

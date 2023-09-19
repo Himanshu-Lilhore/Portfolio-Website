@@ -113,3 +113,41 @@ torchToggle.addEventListener('click', function toggleTorchClasses(){
 })
 
 
+// Scattering random shapes 
+let randDiv = document.querySelector('#randShapes')
+let sqLine = './media/squiggly-line.svg'
+let rnShape = './media/rand-purple-shape.svg'
+
+let h1, h2, num1, num2, num3, num4, str
+for(let i = 0; i<10; i++){
+    // h1 = document.createElement('img');
+    // h1.src = sqLine;
+    // h1.classList.add('w-90', 'h-auto');
+    // num1 = Math.ceil((Math.random() * 100000) % randDiv.clientHeight);
+    // num2 = Math.ceil((Math.random() * 100000) % randDiv.clientWidth);
+    // num3 = Math.ceil((Math.random() * 100000) % 359);
+    // str = "top: " + num1 + "px; left: " + num2 + "px;";
+    // h1.style.top = num1 + 'px';
+    // h1.style.left = num2 + 'px';
+    // h1.style.position = 'absolute';
+    // h1.style.transform = 'rotate(' + num3 + 'deg)'
+    // h1.style.opacity = '1'
+    // randDiv.appendChild(h1);
+
+
+    h2 = document.createElement('img');
+    h2.src = rnShape;
+    num1 = Math.ceil((Math.random() * 100000) % randDiv.clientHeight);
+    num2 = Math.ceil((Math.random() * 100000) % randDiv.clientWidth);
+    num3 = Math.ceil((Math.random() * 100000) % 359);
+    console.log(randDiv.clientHeight, randDiv.clientWidth)
+    // num4 = Math.ceil((Math.random() * 100000) % 15);
+    h2.classList.add('w-50', 'h-auto');
+    str = "top: " + num1 + "px; left: " + num2 + "px;";
+    h2.style.top = num1 + 'px';
+    h2.style.left = num2 + 'px';
+    h2.style.position = 'absolute';
+    h2.style.transform = 'rotate(' + num3 + 'deg)'
+    h2.style.opacity = '0.25'
+    randDiv.appendChild(h2);    
+}

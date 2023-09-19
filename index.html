@@ -23,7 +23,7 @@
     
 </head>
 
-<body style="background-color:var(--bg-color-1);" class="h-full w-full relative">
+<body style="background-color:var(--bg-color-1);" class="relative">
     
     <!-- Mouse pointer & bg-->
     <div class="bgContainer">
@@ -35,6 +35,11 @@
     <div id="blur">
     </div>
 
+    <!-- Random shapes -->
+    <div class="bgContainer">
+        <div id='randShapes'>
+        </div>
+    </div>
 
 
     <div class="m-auto" style="max-width:1240px">
@@ -105,7 +110,8 @@
         <section class="flex p-5 w-auto justify-evenly items-center" style="min-height: 500px; z-index:5; color:var(--complementory-1);">
             <div>
                 <div class="text-3xl pl-2">
-                    <span>Hi, I'm</span>
+                    <span class="font-bold">Hi,</span>
+                    <span>I'm</span>
                 </div>
                 <div>
                     <span class='font-8 text-9xl justify-left z-10 font-bold font-border'>Himanshu</span>
@@ -186,7 +192,7 @@
                                     <iframe id='selfRef' src="./index.html"></iframe>
                                 </div>
                             </div>
-                            <div>
+                            <div class="cardTitle">
                                 This project itself
                             </div>
                             <div class="border border-black"></div>
@@ -212,7 +218,7 @@
                                     <img src="./media/proj-randPatt.png">
                                 </div>
                             </div>
-                            <div>
+                            <div class="cardTitle">
                                 Random Pattern generator
                             </div>
                             <div class="border border-black"></div>
@@ -237,7 +243,7 @@
                                     <img src="./media/offlineOrLoading.gif">
                                 </div>
                             </div>
-                            <div>
+                            <div class="cardTitle">
                                 Rhode Island Website Automation
                             </div>
                             <div class="border border-black"></div>
@@ -369,7 +375,7 @@
     </div>
 
     <!-- footer -->
-    <footer class='flex text-lg bg-black text-white w-full items-center p-12 z-10' style='min-height:220px;'>
+    <footer class='flex text-lg text-white w-full items-center p-12 z-10' style='min-height:220px; background-color: var(--bg-color-2); color: var(--complementory-2)'>
         <div class='ml-auto flex justify-center items-center'>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
               <path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
