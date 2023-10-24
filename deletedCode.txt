@@ -8,10 +8,6 @@ bg-gradient-to-b from-blue-400 to-purple-500
 
 
 
-something new
-
-
-
 
 
 
